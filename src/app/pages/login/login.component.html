@@ -38,7 +38,7 @@
           class="form-input"
         />
         <button class="toggle-eye" (click)="togglePassword()" type="button">
-          {{ mostrarPassword ? '🙈' : '👁️' }}
+          {{ mostrarPassword ? '' : '' }}
         </button>
       </div>
       <a routerLink="/recuperar" class="forgot-link">¿Olvidaste tu contraseña?</a>
@@ -56,6 +56,7 @@
   </div>
 
   <!-- Panel derecho: imagen -->
-  <!--<div class="login-image"></div>-->
-
+ <div class="imagen-login">
+    <img src="assets/imagen-login.png" alt ="imagen login" class="imagen-login" />
+ </div>
 </div>

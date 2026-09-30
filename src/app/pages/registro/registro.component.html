@@ -1,0 +1,55 @@
+<div class = "registro-page">
+  
+  <!-- Panel izquierdo -->
+   <div class="registro-panel">
+      <!-- Logo -->
+     <div class="registro-logo">
+         <img src="assets/logo.png" alt="Logo" class="logo-img" />
+         <span>Riego Inteligente</span>
+      </div>
+  
+
+     <h1 class="registro-title">Crea tu cuenta</h1>
+     <p class="registro-sub">Unete y crea tu jardin de forma inteligente</p>
+
+      <!-- Error -->
+      <div class="error-msg" *ngIf="error">
+      {{ error }}
+     </div>
+  
+     <!-- Formulario de registro -->
+     <div class="form-registro">
+         <label for="Usuario">Usuario</label>
+         <input
+          type="text"
+          [(ngModel)]="usuario"
+          placeholder="usuario"
+          class="form-input-registro"
+         />
+     </div> 
+
+     <div class="form-registro-contra">
+           <label for="contraseña">Contraseña</label>
+
+          <input
+          [type]="mostrarPassword ? 'text' : 'password'"
+          [(ngModel)]="password"
+          placeholder="Contraseña"
+          class="form-input-registro"
+          />
+
+         <button class="toggle-eye" (click)="togglePassword()" type="button">
+              {{ mostrarPassword ? 'Ocultar' : 'Mostrar' }}
+          </button>
+       </div>
+
+      <button class="btn-registro" (click)="registrarUsuario()">Registrarse</button>
+       
+      <P class="registro-link">¿ya tienes una cuenta? <a href="/login">Inicia sesión</a></P>
+   </div>
+
+    <!-- Panel derecho -->
+     <div class="imagen-registro">
+       <img src="assets/imagen-login.png" alt ="imagen registro" class="imagen-registro" />
+     </div>
+</div>

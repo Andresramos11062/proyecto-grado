@@ -38,15 +38,13 @@
           class="form-input"
         />
         <button class="toggle-eye" (click)="togglePassword()" type="button">
-          {{ mostrarPassword ? '' : '' }}
+          {{ mostrarPassword ? 'Ocultar' : 'Mostrar' }}
         </button>
       </div>
       <a routerLink="/recuperar" class="forgot-link">¿Olvidaste tu contraseña?</a>
     </div>
 
-    <button class="btn-submit" (click)="iniciarSesion()">
-      Iniciar sesión
-    </button>
+    <button class="btn-submit" (click)="iniciarSesion()">Iniciar sesión</button>
 
     <p class="register-link">
       ¿No tienes cuenta?
